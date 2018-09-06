@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" verbose="2">
+
+    <test name="TradeMax tests">
+        <classes>
+            <class name="tests.local.PrivateCustomerNoAddress"/>
+            <class name="tests.local.PrivateCustomerFillAddress"/>
+        </classes>
+    </test>
+</suite>
