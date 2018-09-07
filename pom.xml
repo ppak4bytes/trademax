@@ -85,15 +85,21 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <systemProperties>
+                        <property>
+                            <name>browser</name>
+                            <value>htmlunit</value>
+                        </property>
+                    </systemProperties>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
-                        <!--<property>-->
-                            <!--<name>listener</name>-->
-                            <!--<value>listeners.TestExecutionListener</value>-->
-                        <!--</property>-->
+                        <property>
+                            <name>listener</name>
+                            <value>listeners.TestExecutionListener</value>
+                        </property>
                     </properties>
                 </configuration>
                 <dependencies>
