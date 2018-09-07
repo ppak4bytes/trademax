@@ -7,6 +7,6 @@ public interface Page {
     }
 
     default int waitTimeout(){
-        return 5000;
+        return 6000;
     }
 }

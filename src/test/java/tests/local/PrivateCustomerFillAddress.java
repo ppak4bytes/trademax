@@ -1,7 +1,9 @@
 package tests.local;
 
 import io.qameta.allure.Description;
+import listeners.TestExecutionListener;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.CheckOutPage;
 import pages.IndexPage;
@@ -9,7 +11,7 @@ import pages.ProductPage;
 
 import static org.testng.Assert.assertTrue;
 
-
+@Listeners({TestExecutionListener.class})
 public class PrivateCustomerFillAddress extends BaseTest {
 
     private IndexPage homePage;
@@ -29,8 +31,8 @@ public class PrivateCustomerFillAddress extends BaseTest {
     @Test(dependsOnMethods = "searchForItemAndAddToCart", dataProvider = "userAddress")
     public void fillAddress(String s1, String s2){
         checkOutPage = new CheckOutPage();
-        checkOutPage.openAddressForm();
-        checkOutPage.fillFormField(s1, s2);
+        checkOutPage.openAddressFormPrivate();
+        checkOutPage.fillFormFieldCompany(s1, s2);
     }
 
     @Description("Validates payment methods for Private customer with filled address")
