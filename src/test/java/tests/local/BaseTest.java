@@ -14,12 +14,12 @@ public abstract class BaseTest {
         //Configuration.browser = "lynx";
         //Configuration.headless = true;
         //Configuration.startMaximized = true;
-        Configuration.screenshots = false;
+        //Configuration.screenshots = false;
     }
 
     @AfterClass
     public void afterRun(){
-        WebDriverRunner.clearBrowserCache();
-        WebDriverRunner.closeWebDriver();
+        //WebDriverRunner.clearBrowserCache();
+        //WebDriverRunner.closeWebDriver();
     }
 }
