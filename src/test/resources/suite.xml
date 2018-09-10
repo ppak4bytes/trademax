@@ -4,8 +4,8 @@
 
     <test name="TradeMax tests">
         <classes>
-            <class name="tests.local.PrivateCustomerNoAddress"/>
-            <class name="tests.local.PrivateCustomerFillAddress"/>
+            <class name="tests.local.PrivatePayMethodsNoAddress"/>
+            <class name="tests.local.PrivatePayMethodsFillAddress"/>
         </classes>
     </test>
 </suite>

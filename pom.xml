@@ -93,7 +93,7 @@
                     <!--</systemProperties>-->
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/suite.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/CompanyPayMethods.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
                         <property>

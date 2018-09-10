@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CompanyPayMethods" verbose="2">
+
+    <test name="CompanyPayMethods tests">
+        <classes>
+            <class name="tests.local.CompanyPayMethodsNoAddress"/>
+            <class name="tests.local.CompanyPayMethodsSsn"/>
+        </classes>
+    </test>
+</suite>

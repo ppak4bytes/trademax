@@ -1,12 +1,12 @@
 package tests.local;
 
-
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
 import listeners.TestExecutionListener;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
@@ -14,7 +14,7 @@ import pages.ProductPage;
 import static org.testng.Assert.assertTrue;
 
 @Listeners({TestExecutionListener.class})
-public class PrivateCustomerNoAddress extends BaseTest{
+public class PrivatePayMethodsFillAddress extends BaseTest {
 
     private IndexPage homePage;
     private ProductPage productPage;
@@ -32,11 +32,14 @@ public class PrivateCustomerNoAddress extends BaseTest{
     @Description("Validates default payment methods for Private customer with empty address")
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
     public void availablePayMethodsNoAddress(){
-        checkOutPage = new CheckOutPage();
-        checkOutPage.openAddressFormPrivate();
-        checkOutPage.getPayMethodValues();
-        assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"));
-        assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"));
+        checkOutPage = new CheckOutPage()
+                       .openAddressFormPrivate()
+                       .getPayMethodValues();
+
+        SoftAssert sf = new SoftAssert();
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
+        sf.assertAll();
     }
 
     @Description("Fill address details")
@@ -51,13 +54,15 @@ public class PrivateCustomerNoAddress extends BaseTest{
     @Test(dependsOnMethods = "fillAddress")
     public void availablePayMethodsFilledAddress(){
         checkOutPage.getPayMethodValues();
-        assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"));
-        assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"));
+
+        SoftAssert sf = new SoftAssert();
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
+        sf.assertAll();
     }
 
     @DataProvider
     public Object[][] userAddress(){
         return new Object[][]{{"Universitetsvägen 2B", "10691"},};
     }
-
 }

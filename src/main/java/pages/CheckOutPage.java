@@ -18,7 +18,7 @@ public class CheckOutPage implements Page {
      private ElementsCollection payMethods = $$x("//form[@id='paymentMethodsForm']/descendant::input");
 
      private SelenideElement  companyTab = $x("//li[contains(text(), 'Företag')]"),
-                              ssnField = $x("//form[@id='sveaSsnFormPrivate']/descendant::input"),
+                              ssnField = $x("//*[@id='sveaSsnFormCompany']/div/input"),
                               emailFieldPrivate = $x("//form[@id='sveaManuallyAddressFormPrivate']//input[@id='email']"),
                               emailFieldCompany = $x("//form[@id='sveaManuallyAddressFormCompany']//input[@id='email']"),
                               addressLinkPrivate = $x("//div[@id='checkout']//form[@id='sveaSsnFormPrivate']/a"),
@@ -70,12 +70,12 @@ public class CheckOutPage implements Page {
     }
 
       public CheckOutPage scrollToAddressFormPrivate(){
-          emailFieldPrivate.scrollIntoView(true);
+          emailFieldPrivate.waitUntil(appear, waitTimeout()).scrollIntoView(true);
           return this;
       }
 
       public CheckOutPage scrollToAddressFormCompany(){
-          emailFieldCompany.scrollIntoView(true);
+          emailFieldCompany.waitUntil(appear, waitTimeout()).scrollIntoView(true);
           return this;
       }
 
@@ -87,7 +87,8 @@ public class CheckOutPage implements Page {
     }
 
       public CheckOutPage fillSsnAndSelectAddress(String ssn){
-          ssnField.waitUntil(appear, waitTimeout()).setValue(ssn).pressEnter();
+          addressLinkCompany.waitUntil(appear, waitTimeout()).scrollIntoView(false);
+          ssnField.waitUntil(appear, waitTimeout()).scrollIntoView(false).setValue(ssn).pressEnter();
           ssnPopUpFrame.waitUntil(appear, waitTimeout());
           ssnAddressButton.waitUntil(appear,waitTimeout()).click();
           return this;

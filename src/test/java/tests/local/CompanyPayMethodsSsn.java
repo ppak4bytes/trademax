@@ -13,8 +13,8 @@ import pages.ProductPage;
 
 import static org.testng.Assert.assertTrue;
 
-@Listeners({TestExecutionListener.class})
-public class CompanyCustomerPayMethods extends BaseTest {
+//@Listeners({TestExecutionListener.class})
+public class CompanyPayMethodsSsn extends BaseTest {
 
     private IndexPage homePage;
     private ProductPage productPage;
@@ -28,28 +28,30 @@ public class CompanyCustomerPayMethods extends BaseTest {
         productPage.addItemToCart();
     }
 
-    @Test
-    public void fillSsn(){
-        checkOutPage = new CheckOutPage();
-        checkOutPage.selectCompanyTab()
-                    .fillSsnAndSelectAddress("")
-                    .getPayMethodValues();
+    @Test(dependsOnMethods = "searchForItemAndAddToCart", dataProvider = "ssn")
+    public void fillSsn(String ssn){
+        checkOutPage = new CheckOutPage()
+                       .selectCompanyTab()
+                       .fillSsnAndSelectAddress(ssn)
+                       .getPayMethodValues();
+
         SoftAssert sf = new SoftAssert();
-        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"));
-        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"));
-        sf.assertTrue(c);
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_INVOICE"), "Should contain Svea invoice value");
+        sf.assertAll();
     }
 
-    @Description("Validates default payment methods for Private customer with empty address")
-    @Test(dependsOnMethods = "searchForItemAndAddToCart")
-    public void availablePayMethodsNoAddress(){
-        checkOutPage = new CheckOutPage();
-        checkOutPage.selectCompanyTab()
-                    .openAddressFormCompany()
-                    .getPayMethodValues();
-        assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"));
-        assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"));
-    }
+//    @Description("Validates default payment methods for Private customer with empty address")
+//    @Test(dependsOnMethods = "searchForItemAndAddToCart")
+//    public void availablePayMethodsNoAddress(){
+//        checkOutPage = new CheckOutPage();
+//        checkOutPage.selectCompanyTab()
+//                    .openAddressFormCompany()
+//                    .getPayMethodValues();
+//        assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"));
+//        assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"));
+//    }
 
 //    @Description("Fill address details")
 //    @Test(dependsOnMethods = "availablePayMethodsNoAddress", dataProvider = "userAddress")
