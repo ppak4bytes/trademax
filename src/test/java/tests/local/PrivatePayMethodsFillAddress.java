@@ -13,7 +13,7 @@ import pages.ProductPage;
 
 import static org.testng.Assert.assertTrue;
 
-@Listeners({TestExecutionListener.class})
+//@Listeners({TestExecutionListener.class})
 public class PrivatePayMethodsFillAddress extends BaseTest {
 
     private IndexPage homePage;

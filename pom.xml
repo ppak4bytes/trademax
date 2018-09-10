@@ -94,6 +94,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/CompanyPayMethods.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/PrivatePayMethods.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
                         <property>

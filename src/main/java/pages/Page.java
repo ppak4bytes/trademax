@@ -3,7 +3,7 @@ package pages;
 public interface Page {
 
     default String url(){
-        return "https://www.trademax.se";
+        return "https://www.furniturebox.se";
     }
 
     default int waitTimeout(){

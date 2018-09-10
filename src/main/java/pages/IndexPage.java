@@ -14,9 +14,9 @@ public class IndexPage implements Page {
 
     private SelenideElement searchField = $x("//div[@id='search']/descendant::input"),
                             cookieButton = $x("//div[@id='cookiesPolicy']/descendant::button"),
-                            categoriesTab = $x("//li[@class='tabs--button ']"),
+                            categoriesTab = $x("//li[contains(text(), 'Kategorier')]"),
                             foundCategory = $x("//*[@id='searchPageTabs']/div/div/div[2]/div/div/div[1]/a"),
-                            firstProductInCategoryList = $x("//*[@id='productListExtended']/div/div[1]/article/div/div[1]/h3/a");
+                            firstProductInCategoryList = $x("//*[@id='productListExtended']/div/div[1]//article/div/div/h3/a");
 
 
     public ProductPage searchForItem(String itemID){
@@ -29,6 +29,5 @@ public class IndexPage implements Page {
         firstProductInCategoryList.waitUntil(appear, waitTimeout()).click();
         return new ProductPage();
     }
-
 
 }

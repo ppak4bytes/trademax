@@ -8,9 +8,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ProductPage implements Page {
 
-    private SelenideElement addToCart = $x("//div[@id='productBuySection']//button"),
-                            confirmationPopUp = $x("//div[@id='confirmationPopup']//a"),
-                            addressLink = $x("//div[@id='checkout']//form[@id='sveaSsnFormPrivate']/a");
+    private SelenideElement addToCart = $x("//div[@id='productBuySection']/descendant::button[1]"),
+                            confirmationPopUp = $x("//div[@id='confirmationPopup']//a");
 
 
 
