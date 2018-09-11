@@ -9,8 +9,8 @@ public abstract class BaseTest {
 
     @BeforeClass(alwaysRun = true)
     public void beforeRun(){
-        //Configuration.browser = "chrome";
-        Configuration.headless = true;
+        Configuration.browser = "phantomjs";
+        //Configuration.headless = true;
         Configuration.startMaximized = true;
         Configuration.screenshots = false;
     }
