@@ -79,6 +79,12 @@
                 <version>2.20.1</version>
 
                 <configuration>
+                    <systemProperties>
+                        <property>
+                            <name>browser</name>
+                            <value>firefox</value>
+                        </property>
+                    </systemProperties>
                     <argLine>
                          -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
