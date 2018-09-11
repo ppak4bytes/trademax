@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0cb3def0-1c3c-41d9-92f6-a59e654b6360" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listeners/TestExecutionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listeners/TestExecutionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/local/CompanyPayMethodsNoAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/local/CompanyPayMethodsNoAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/local/CompanyPayMethodsSsn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/local/CompanyPayMethodsSsn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/local/PrivatePayMethodsFillAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/local/PrivatePayMethodsFillAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/local/PrivatePayMethodsNoAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/local/PrivatePayMethodsNoAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/PrivatePayMethods.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/PrivatePayMethods.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/local/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/local/BaseTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="../trademax/.idea/" />
@@ -92,14 +83,14 @@
           <entry key="CompanyPayMethods" value="1" />
           <entry key="companyPayMethods" value="23" />
           <entry key="dummy" value="14" />
-          <entry key="java" value="1288" />
+          <entry key="java" value="1304" />
           <entry key="txt" value="13" />
           <entry key="xml" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1288" />
+          <entry key="JAVA" value="1304" />
           <entry key="PLAIN_TEXT" value="27" />
           <entry key="XML" value="126" />
         </counts>
@@ -109,7 +100,7 @@
           <entry key="CompanyPayMethods" value="1" />
           <entry key="class" value="2" />
           <entry key="companyPayMethods" value="1" />
-          <entry key="java" value="13" />
+          <entry key="java" value="14" />
           <entry key="properties" value="3" />
           <entry key="xml" value="3" />
         </counts>
@@ -117,7 +108,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="13" />
+          <entry key="JAVA" value="14" />
           <entry key="Properties" value="3" />
           <entry key="XML" value="5" />
         </counts>
@@ -159,7 +150,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/local/PrivatePayMethodsNoAddress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="365">
               <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -169,13 +160,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/ProductPage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/local/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -258,7 +246,6 @@
         <option value="$PROJECT_DIR$/src/test/java/tests/local/TradeMaxTest.java" />
         <option value="$PROJECT_DIR$/src/test/resources/suite.xml" />
         <option value="$PROJECT_DIR$/src/test/java/tests/local/CompanyCustomerNoAddress.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/local/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/local/PrivateCustomerFillAddress.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/local/PrivateCustomerNoAddress.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/local/CompanyCustomerPayMethods.java" />
@@ -277,6 +264,7 @@
         <option value="$PROJECT_DIR$/src/test/java/tests/local/PrivatePayMethodsFillAddress.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/local/CompanyPayMethodsSsn.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/local/CompanyPayMethodsNoAddress.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/local/BaseTest.java" />
       </list>
     </option>
   </component>
@@ -373,7 +361,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536656103501" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536657027341" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -392,7 +380,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.PrivatePayMethodsNoAddress">
+  <component name="RunManager" selected="TestNG.PrivatePayMethodsNoAddress.searchForItemAndAddToCart">
     <configuration name="CompanyPayMethodsNoAddress" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test-module" />
       <extension name="coverage">
@@ -484,11 +472,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PrivatePayMethodsNoAddress.searchForItemAndAddToCart" />
         <item itemvalue="TestNG.CompanyPayMethodsSsn" />
         <item itemvalue="TestNG.CompanyPayMethodsNoAddress" />
         <item itemvalue="TestNG.PrivatePayMethodsFillAddress" />
         <item itemvalue="TestNG.PrivatePayMethodsNoAddress" />
-        <item itemvalue="TestNG.PrivatePayMethodsNoAddress.searchForItemAndAddToCart" />
       </list>
     </recent_temporary>
   </component>
@@ -566,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536319859521</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit --head">
+      <created>1536656164232</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1536656164232</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -753,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/local/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/local/CompanyPayMethodsFillAddress.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -867,9 +855,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/local/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/local/PrivatePayMethodsNoAddress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="365">
           <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
