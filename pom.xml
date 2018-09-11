@@ -82,7 +82,11 @@
                     <systemProperties>
                         <property>
                             <name>browser</name>
-                            <value>firefox</value>
+                            <value>chrome</value>
+                        </property>
+                        <property>
+                            <name>webdriver.chrome.driver</name>
+                            <value>/usr/local/bin/chromedriver</value>
                         </property>
                     </systemProperties>
                     <argLine>
