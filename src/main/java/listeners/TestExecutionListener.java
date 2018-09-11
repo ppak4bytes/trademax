@@ -1,13 +1,14 @@
 package listeners;
 
-import com.codeborne.selenide.Screenshots;
-import com.google.common.io.Files;
+
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import java.io.File;
-import java.io.IOException;
+
 
 
 public class TestExecutionListener implements ITestListener {
@@ -19,14 +20,12 @@ public class TestExecutionListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-       try{makeScreenshot(iTestResult.getMethod().getMethodName());}
-       catch (IOException e){e.printStackTrace();}
+       makeScreenshot();
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        try{makeScreenshot(iTestResult.getMethod().getMethodName());}
-        catch (IOException e){e.printStackTrace();}
+        makeScreenshot();
     }
 
     @Override
@@ -49,9 +48,8 @@ public class TestExecutionListener implements ITestListener {
 
     }
 
-    @Attachment(value = "{methodName}", type = "image/png")
-    private byte[] makeScreenshot(String methodName) throws IOException {
-        File selenideScreenshot = Screenshots.takeScreenShotAsFile();
-        return selenideScreenshot !=null ? Files.toByteArray(selenideScreenshot) : new byte[]{};
+    @Attachment(value = "screenshot", type = "image/png")
+    private byte[] makeScreenshot() {
+        return ((TakesScreenshot)WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 }

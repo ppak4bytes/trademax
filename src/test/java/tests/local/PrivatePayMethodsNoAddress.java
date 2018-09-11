@@ -2,7 +2,6 @@ package tests.local;
 
 
 import com.codeborne.selenide.WebDriverRunner;
-import io.qameta.allure.Description;
 import listeners.TestExecutionListener;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -22,7 +21,6 @@ public class PrivatePayMethodsNoAddress extends BaseTest{
     private CheckOutPage checkOutPage;
 
 
-    @Description("Search for category and put first item to cart")
     @Test
     public void searchForItemAndAddToCart(){
         homePage = new IndexPage();
@@ -30,7 +28,7 @@ public class PrivatePayMethodsNoAddress extends BaseTest{
         productPage.addItemToCart();
     }
 
-    @Description("Validates default payment methods for Private customer with empty address")
+
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
     public void availablePayMethodsNoAddress(){
         checkOutPage = new CheckOutPage()

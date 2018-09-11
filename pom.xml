@@ -44,19 +44,16 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>2.7.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-maven</artifactId>
             <version>2.9</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-core -->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
@@ -83,17 +80,11 @@
 
                 <configuration>
                     <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
-                    <!--<systemProperties>-->
-                        <!--<property>-->
-                            <!--<name>browser</name>-->
-                            <!--<value>htmlunit</value>-->
-                        <!--</property>-->
-                    <!--</systemProperties>-->
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/CompanyPayMethods.xml</suiteXmlFile>
+                        <!--<suiteXmlFile>src/test/resources/CompanyPayMethods.xml</suiteXmlFile>-->
                         <suiteXmlFile>src/test/resources/PrivatePayMethods.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>

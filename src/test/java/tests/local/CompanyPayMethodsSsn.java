@@ -1,7 +1,6 @@
 package tests.local;
 
 import com.codeborne.selenide.WebDriverRunner;
-import io.qameta.allure.Description;
 import listeners.TestExecutionListener;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -20,7 +19,6 @@ public class CompanyPayMethodsSsn extends BaseTest {
     private ProductPage productPage;
     private CheckOutPage checkOutPage;
 
-    @Description("Search for category and put first item to cart")
     @Test
     public void searchForItemAndAddToCart(){
         homePage = new IndexPage();
