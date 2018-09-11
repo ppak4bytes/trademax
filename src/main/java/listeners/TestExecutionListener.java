@@ -20,11 +20,13 @@ public class TestExecutionListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-       makeScreenshot();
+        System.out.println(">>>>>>>>>> LISTENER CHECKUP <<<<<<<<<<<<");
+        makeScreenshot();
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
+        System.out.println(">>>>>>>>>> LISTENER CHECKUP <<<<<<<<<<<<");
         makeScreenshot();
     }
 
