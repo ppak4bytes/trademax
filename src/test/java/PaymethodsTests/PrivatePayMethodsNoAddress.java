@@ -1,19 +1,21 @@
-package tests.local;
+package PaymethodsTests;
 
-import listeners.TestExecutionListener;
-import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
 
-//@Listeners({TestExecutionListener.class})
-public class CompanyPayMethodsNoAddress extends BaseTest {
+import static org.testng.Assert.assertTrue;
+
+//@Listeners({AllureScreenShotListener.class})
+public class PrivatePayMethodsNoAddress extends BaseTest{
 
     private IndexPage homePage;
     private ProductPage productPage;
     private CheckOutPage checkOutPage;
+
 
     @Test
     public void searchForItemAndAddToCart(){
@@ -22,11 +24,11 @@ public class CompanyPayMethodsNoAddress extends BaseTest {
         productPage.addItemToCart();
     }
 
+
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
     public void availablePayMethodsNoAddress(){
         checkOutPage = new CheckOutPage()
-                       .selectCompanyTab()
-                       .openAddressFormCompany()
+                       .openAddressFormPrivate()
                        .getPayMethodValues();
 
         SoftAssert sf = new SoftAssert();
@@ -34,4 +36,5 @@ public class CompanyPayMethodsNoAddress extends BaseTest {
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
         sf.assertAll();
     }
+
 }

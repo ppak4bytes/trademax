@@ -1,9 +1,6 @@
-package tests.local;
+package PaymethodsTests;
 
-import com.codeborne.selenide.WebDriverRunner;
-import listeners.TestExecutionListener;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.CheckOutPage;

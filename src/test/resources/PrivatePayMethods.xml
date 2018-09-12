@@ -4,8 +4,8 @@
 
     <test name="PrivatePayMethods tests">
         <classes>
-            <class name="tests.local.PrivatePayMethodsNoAddress"/>
-            <class name="tests.local.PrivatePayMethodsFillAddress"/>
+            <class name="PaymethodsTests.PrivatePayMethodsNoAddress"/>
+            <class name="PaymethodsTests.PrivatePayMethodsFillAddress"/>
         </classes>
     </test>
 </suite>

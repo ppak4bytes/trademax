@@ -1,23 +1,25 @@
-package tests.local;
+package PaymethodsTests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+
 public abstract class BaseTest {
 
     @BeforeClass(alwaysRun = true)
     public void beforeRun(){
         //Configuration.browser = "phantomjs";
-        Configuration.headless = true;
+        //Configuration.headless = true;
         Configuration.startMaximized = true;
         Configuration.screenshots = false;
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterRun(){
         WebDriverRunner.clearBrowserCache();
         WebDriverRunner.closeWebDriver();
     }
+
 }

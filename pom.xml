@@ -94,13 +94,13 @@
                     </argLine>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/CompanyPayMethods.xml</suiteXmlFile>
+                        <!--<suiteXmlFile>src/test/resources/CompanyPayMethods.xml</suiteXmlFile>-->
                         <suiteXmlFile>src/test/resources/PrivatePayMethods.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
                         <property>
                             <name>listener</name>
-                            <value>listeners.TestExecutionListener</value>
+                            <value>listeners.AllureScreenShotListener</value>
                         </property>
                     </properties>
                 </configuration>

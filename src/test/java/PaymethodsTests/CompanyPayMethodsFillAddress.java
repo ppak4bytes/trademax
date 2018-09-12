@@ -1,4 +1,4 @@
-package tests.local;
+package PaymethodsTests;
 
 public class CompanyPayMethodsFillAddress {
 }
