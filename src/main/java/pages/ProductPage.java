@@ -14,7 +14,7 @@ public class ProductPage implements Page {
 
 
     public ProductPage addItemToCart(){
-        addToCart.shouldBe(visible).click();
+        addToCart.shouldBe(visible).doubleClick();
         confirmationPopUp.shouldBe(visible).click();
         return this;
     }

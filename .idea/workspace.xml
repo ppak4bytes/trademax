@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb3def0-1c3c-41d9-92f6-a59e654b6360" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/Draft.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ChilliPayMethods.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/FurnitureBoxPayMethods.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/TradeMaxPayMethods.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/WeGotPayMethods.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PaymethodsTests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PaymethodsTests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PaymethodsTests/CompanyPayMethodsFillAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PaymethodsTests/CompanyFillAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PaymethodsTests/CompanyPayMethodsNoAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PaymethodsTests/CompanyNoAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PaymethodsTests/CompanyPayMethodsSsn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PaymethodsTests/CompanySsn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivatePayMethodsFillAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivateNoAndFillAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivatePayMethodsNoAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivateNoAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/CompanyPayMethods.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/PrivatePayMethods.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Draft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Draft.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="../trademax/.idea/" />
@@ -87,14 +75,14 @@
     <session id="288411708">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -102,16 +90,16 @@
           <entry key="CompanyPayMethods" value="1" />
           <entry key="companyPayMethods" value="23" />
           <entry key="dummy" value="14" />
-          <entry key="java" value="2131" />
-          <entry key="txt" value="151" />
+          <entry key="java" value="2151" />
+          <entry key="txt" value="169" />
           <entry key="xml" value="370" />
           <entry key="xsl" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2131" />
-          <entry key="PLAIN_TEXT" value="165" />
+          <entry key="JAVA" value="2151" />
+          <entry key="PLAIN_TEXT" value="183" />
           <entry key="XML" value="406" />
         </counts>
       </usages-collector>
@@ -120,10 +108,10 @@
           <entry key="CompanyPayMethods" value="1" />
           <entry key="class" value="16" />
           <entry key="companyPayMethods" value="1" />
-          <entry key="java" value="34" />
+          <entry key="java" value="35" />
           <entry key="png" value="2" />
           <entry key="properties" value="4" />
-          <entry key="xml" value="20" />
+          <entry key="xml" value="24" />
           <entry key="xsl" value="2" />
         </counts>
       </usages-collector>
@@ -131,9 +119,9 @@
         <counts>
           <entry key="CLASS" value="16" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="34" />
+          <entry key="JAVA" value="35" />
           <entry key="Properties" value="4" />
-          <entry key="XML" value="24" />
+          <entry key="XML" value="28" />
         </counts>
       </usages-collector>
     </session>
@@ -141,23 +129,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivateNoAddress.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="36" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/IndexPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#897#898#0" expanded="true" />
-                <element signature="e#922#923#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -165,8 +140,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/ProductPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="195">
+              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pages/CheckOutPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1065">
+              <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,7 +162,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/Draft.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+              <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,17 +173,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/PaymethodsTests/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            <state relative-caret-position="210">
+              <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="89" column="35" lean-forward="true" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/ChilliPayMethods.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
+            <state relative-caret-position="30">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/FurnitureBoxPayMethods.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/TradeMaxPayMethods.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/WeGotPayMethods.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -248,8 +271,6 @@
         <option value="$PROJECT_DIR$/src/test/java/PaymethodsTests/CompanyPayMethodsSsn.java" />
         <option value="$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivatePayMethodsFillAddress.java" />
         <option value="$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivatePayMethodsNoAddress.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/ProductPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/PaymethodsTests/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivateFillAddress.java" />
         <option value="$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivateNoAndFillAddress.java" />
         <option value="$PROJECT_DIR$/src/test/resources/PrivatePayMethods.xml" />
@@ -259,9 +280,11 @@
         <option value="$PROJECT_DIR$/src/test/java/trademax_suites/ChilliPayMethods.xsl" />
         <option value="$PROJECT_DIR$/src/test/java/trademax_suites/WeGotPayMethods.xml" />
         <option value="$PROJECT_DIR$/src/test/java/trademax_suites/ChilliPayMethods.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/ProductPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/Draft.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/PaymethodsTests/BaseTest.java" />
       </list>
     </option>
   </component>
@@ -310,6 +333,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -344,15 +368,35 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="test-module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trademax" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trademax" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trademax" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536822111789" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536827285522" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -617,28 +661,17 @@
       <option name="project" value="LOCAL" />
       <updated>1536748769655</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="improving locators">
+      <created>1536822194142</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1536822194142</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Users_pavlopak_Projects_trademax_src_test_java_trademax_suites_PrivatePayMethods_xml - 2018.09.12 at 16h 37m 41s.xml">
-      <configuration name="/Users/pavlopak/Projects/trademax/src/test/java/trademax_suites/PrivatePayMethods.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pavlopak_Projects_trademax_src_test_java_trademax_suites_PrivatePayMethods_xml - 2018.09.12 at 16h 41m 25s.xml">
-      <configuration name="/Users/pavlopak/Projects/trademax/src/test/java/trademax_suites/PrivatePayMethods.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pavlopak_Projects_trademax_src_test_java_trademax_suites_PrivatePayMethods_xml - 2018.09.12 at 16h 43m 09s.xml">
-      <configuration name="/Users/pavlopak/Projects/trademax/src/test/java/trademax_suites/PrivatePayMethods.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pavlopak_Projects_trademax_src_test_java_trademax_suites_PrivatePayMethods_xml - 2018.09.12 at 16h 45m 26s.xml">
-      <configuration name="/Users/pavlopak/Projects/trademax/src/test/java/trademax_suites/PrivatePayMethods.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pavlopak_Projects_trademax_src_test_java_trademax_suites_PrivatePayMethods_xml - 2018.09.12 at 16h 48m 16s.xml">
-      <configuration name="/Users/pavlopak/Projects/trademax/src/test/java/trademax_suites/PrivatePayMethods.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pavlopak_Projects_trademax_src_test_java_trademax_suites_PrivatePayMethods_xml - 2018.09.12 at 16h 56m 32s.xml">
-      <configuration name="/Users/pavlopak/Projects/trademax/src/test/java/trademax_suites/PrivatePayMethods.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="Draft - 2018.09.13 at 09h 47m 33s.xml">
       <configuration name="Draft" configurationId="TestNG" />
     </history-entry>
@@ -649,6 +682,24 @@
       <configuration name="Draft" configurationId="TestNG" />
     </history-entry>
     <history-entry file="Draft - 2018.09.13 at 09h 57m 30s.xml">
+      <configuration name="Draft" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Draft - 2018.09.13 at 10h 05m 24s.xml">
+      <configuration name="Draft" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Draft - 2018.09.13 at 10h 08m 05s.xml">
+      <configuration name="Draft" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Draft - 2018.09.13 at 10h 09m 48s.xml">
+      <configuration name="Draft" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Draft - 2018.09.13 at 10h 11m 04s.xml">
+      <configuration name="Draft" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Draft - 2018.09.13 at 10h 12m 11s.xml">
+      <configuration name="Draft" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Draft - 2018.09.13 at 10h 13m 04s.xml">
       <configuration name="Draft" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -663,8 +714,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18317358" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18477103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -708,7 +760,8 @@
     <MESSAGE value="+headless config" />
     <MESSAGE value="enabling all testcases" />
     <MESSAGE value="reimplementing screenshot listener" />
-    <option name="LAST_COMMIT_MESSAGE" value="reimplementing screenshot listener" />
+    <MESSAGE value="improving locators" />
+    <option name="LAST_COMMIT_MESSAGE" value="improving locators" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.14.0/selenium-api-3.14.0.jar!/org/openqa/selenium/WebDriver.class">
@@ -861,16 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/CheckOutPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PaymethodsTests/CompanyFillAddress.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -923,17 +966,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivateNoAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="36" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/ProductPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/TradeMaxPayMethods.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/ChilliPayMethods.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -944,10 +994,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/Draft.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
+        <state relative-caret-position="225">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -958,45 +1011,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PaymethodsTests/PrivateNoAddress.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/ChilliPayMethods.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="36" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PaymethodsTests/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="210">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/Draft.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/CheckOutPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state relative-caret-position="1065">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/ProductPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/IndexPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="165">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/IndexPage.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#897#898#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="89" column="35" lean-forward="true" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
         </state>
       </provider>
     </entry>

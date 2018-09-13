@@ -12,7 +12,7 @@ public class Draft extends BaseTest {
 
     @Test
     public void searchForItemAndAddToCart(){
-        homePage = new IndexPage("https://www.furniturebox.se");
+        homePage = new IndexPage("https://www.trademax.se");
         productPage = homePage.searchForItem("Soffor");
         productPage.addItemToCart();
     }

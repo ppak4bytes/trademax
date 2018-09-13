@@ -80,14 +80,14 @@
 
                 <configuration>
                     <systemProperties>
-                        <!--<property>-->
-                            <!--<name>browser</name>-->
-                            <!--<value>chrome</value>-->
-                        <!--</property>-->
-                        <!--<property>-->
-                            <!--<name>webdriver.chrome.driver</name>-->
-                            <!--<value>/usr/local/bin/chromedriver</value>-->
-                        <!--</property>-->
+                        <property>
+                            <name>browser</name>
+                            <value>chrome</value>
+                        </property>
+                        <property>
+                            <name>webdriver.chrome.driver</name>
+                            <value>/usr/local/bin/chromedriver</value>
+                        </property>
                     </systemProperties>
                     <argLine>
                          -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
