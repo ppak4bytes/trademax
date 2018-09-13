@@ -80,22 +80,24 @@
 
                 <configuration>
                     <systemProperties>
-                        <property>
-                            <name>browser</name>
-                            <value>chrome</value>
-                        </property>
-                        <property>
-                            <name>webdriver.chrome.driver</name>
-                            <value>/usr/local/bin/chromedriver</value>
-                        </property>
+                        <!--<property>-->
+                            <!--<name>browser</name>-->
+                            <!--<value>chrome</value>-->
+                        <!--</property>-->
+                        <!--<property>-->
+                            <!--<name>webdriver.chrome.driver</name>-->
+                            <!--<value>/usr/local/bin/chromedriver</value>-->
+                        <!--</property>-->
                     </systemProperties>
                     <argLine>
                          -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <!--<suiteXmlFile>src/test/resources/CompanyPayMethods.xml</suiteXmlFile>-->
-                        <suiteXmlFile>src/test/resources/PrivatePayMethods.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/TradeMaxPayMethods.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/FurnitureBoxPayMethods.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/ChilliPayMethods.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/WeGotPayMethods.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
                         <property>

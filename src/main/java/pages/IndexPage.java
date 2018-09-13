@@ -15,18 +15,24 @@ public class IndexPage implements Page {
     private SelenideElement searchField = $x("//div[@id='search']/descendant::input"),
                             cookieButton = $x("//div[@id='cookiesPolicy']/descendant::button"),
                             categoriesTab = $x("//li[contains(text(), 'Kategorier')]"),
-                            foundCategory = $x("//*[@id='searchPageTabs']/div/div/div[2]/div/div/div[1]/a"),
+//                            foundCategory = $x("//div[@id='searchPageTabs']//a[@title='"+categoryName+"']"),
                             firstProductInCategoryList = $x("//*[@id='productListExtended']/div/div[1]//article/div/div/h3/a");
 
 
+    public IndexPage (String url){
+        open(url);
+    }
+
     public ProductPage searchForItem(String itemID){
-        open(url());
+
+        final SelenideElement foundCategory = $x("//div[@id='searchPageTabs']//a[@title='"+itemID+"']");
         if(cookieButton.isDisplayed()) cookieButton.shouldBe(visible).click();
-        searchField.waitUntil(appear, waitTimeout()).click();
+        searchField.shouldBe(visible).click();
         searchField.setValue(itemID).pressEnter();
         categoriesTab.waitUntil(appear, waitTimeout()).click();
-        foundCategory.waitUntil(appear, waitTimeout()).click();
-        firstProductInCategoryList.waitUntil(appear, waitTimeout()).click();
+        foundCategory.waitUntil(appear, waitTimeout()).doubleClick();
+        if(!firstProductInCategoryList.is(visible)) firstProductInCategoryList.scrollIntoView(false).click();
+        else firstProductInCategoryList.click();
         return new ProductPage();
     }
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FurnitureBoxPayMethods" verbose="2">
+
+    <parameter name="url" value="https://www.furniturebox.se"/>
+    <parameter name="item" value="Soffor"/>
+
+    <test name="FurnitureBoxPayMethods tests">
+        <classes>
+            <class name="PaymethodsTests.PrivateNoAndFillAddress"/>
+            <class name="PaymethodsTests.CompanyNoAddress"/>
+            <class name="PaymethodsTests.CompanySsn"/>
+        </classes>
+    </test>
+</suite>

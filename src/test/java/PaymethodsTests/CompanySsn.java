@@ -1,6 +1,7 @@
 package PaymethodsTests;
 
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.CheckOutPage;
@@ -10,16 +11,17 @@ import pages.ProductPage;
 import static org.testng.Assert.assertTrue;
 
 //@Listeners({TestExecutionListener.class})
-public class CompanyPayMethodsSsn extends BaseTest {
+public class CompanySsn extends BaseTest {
 
     private IndexPage homePage;
     private ProductPage productPage;
     private CheckOutPage checkOutPage;
 
+    @Parameters({"url", "item"})
     @Test
-    public void searchForItemAndAddToCart(){
-        homePage = new IndexPage();
-        productPage = homePage.searchForItem("Soffor");
+    public void searchForItemAndAddToCart(String url, String item){
+        homePage = new IndexPage(url);
+        productPage = homePage.searchForItem(item);
         productPage.addItemToCart();
     }
 
