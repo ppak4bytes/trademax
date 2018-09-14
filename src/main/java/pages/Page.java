@@ -1,12 +1,20 @@
 package pages;
 
-public interface Page {
+public abstract class Page {
 
-    default String url(){
-        return "https://www.chilli.se";
+    protected String currentUrl;
+
+    protected String currentItem;
+
+    protected int waitTimeout(){
+        return 8000;
     }
 
-    default int waitTimeout(){
-        return 8000;
+    public String url(){
+        return currentUrl;
+    }
+
+    public String getCurrentItem() {
+        return currentItem;
     }
 }

@@ -98,6 +98,7 @@
                         <suiteXmlFile>src/test/resources/FurnitureBoxPayMethods.xml</suiteXmlFile>
                         <suiteXmlFile>src/test/resources/ChilliPayMethods.xml</suiteXmlFile>
                         <suiteXmlFile>src/test/resources/WeGotPayMethods.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/Kodin1PayMethods.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
                         <property>

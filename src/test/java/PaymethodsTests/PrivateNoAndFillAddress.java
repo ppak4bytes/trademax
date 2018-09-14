@@ -1,7 +1,7 @@
 package PaymethodsTests;
 
 import com.codeborne.selenide.WebDriverRunner;
-import org.testng.annotations.DataProvider;
+import io.qameta.allure.Description;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -11,13 +11,13 @@ import pages.ProductPage;
 
 import static org.testng.Assert.assertTrue;
 
-//@Listeners({TestExecutionListener.class})
 public class PrivateNoAndFillAddress extends BaseTest {
 
     private IndexPage homePage;
     private ProductPage productPage;
     private CheckOutPage checkOutPage;
 
+    @Description("Validates if Item can be found on specified channel")
     @Parameters({"url", "item"})
     @Test
     public void searchForItemAndAddToCart(String url, String item){
@@ -26,6 +26,7 @@ public class PrivateNoAndFillAddress extends BaseTest {
         productPage.addItemToCart();
     }
 
+    @Description("Validates if actual paymethods correspond to expected ones with no address provided")
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
     public void availablePayMethodsNoAddress(){
         checkOutPage = new CheckOutPage()
@@ -38,6 +39,7 @@ public class PrivateNoAndFillAddress extends BaseTest {
         sf.assertAll();
     }
 
+    @Description("Validates if Private customer Address form can be filled with provided address details")
     @Parameters({"address", "postcode"})
     @Test(dependsOnMethods = "availablePayMethodsNoAddress")
     public void fillAddress(String address, String postcode){
@@ -46,6 +48,7 @@ public class PrivateNoAndFillAddress extends BaseTest {
         checkOutPage.fillFormFieldPrivate(address, postcode);
     }
 
+    @Description("Validates if actual paymethods correspond to expected ones based on Private customer address details")
     @Test(dependsOnMethods = "fillAddress")
     public void availablePayMethodsFilledAddress(){
         checkOutPage.getPayMethodValues();

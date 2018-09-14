@@ -1,6 +1,6 @@
 package PaymethodsTests;
 
-import org.testng.annotations.DataProvider;
+import io.qameta.allure.Description;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -10,13 +10,13 @@ import pages.ProductPage;
 
 import static org.testng.Assert.assertTrue;
 
-//@Listeners({TestExecutionListener.class})
 public class CompanySsn extends BaseTest {
 
     private IndexPage homePage;
     private ProductPage productPage;
     private CheckOutPage checkOutPage;
 
+    @Description("Validates if Item can be found on specified channel")
     @Parameters({"url", "item"})
     @Test
     public void searchForItemAndAddToCart(String url, String item){
@@ -25,6 +25,7 @@ public class CompanySsn extends BaseTest {
         productPage.addItemToCart();
     }
 
+    @Description("Validates if proposed address can be selected from ssn pop-up and if actual paymethods correspond to expected ones based on provided ssn")
     @Parameters({"ssn"})
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
     public void fillSsn(String ssn){

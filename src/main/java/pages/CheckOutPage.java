@@ -2,22 +2,27 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringJoiner;
+import io.qameta.allure.Step;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Selenide.*;
 
 @SuppressWarnings("never used")
-public class CheckOutPage implements Page {
+public class CheckOutPage extends Page {
 
      public List<String> payMethodsList = new ArrayList<>();
+     final public Map<String, Map<String, String>> parametersList = new HashMap<>();
+     final private Map<String, String> params = new HashMap<>();
+
+
+
 
      private ElementsCollection payMethods = $$x("//form[@id='paymentMethodsForm']/descendant::input");
 
-     private SelenideElement  companyTab = $x("//li[contains(text(), 'Företag')]"),
+     private SelenideElement  companyTab = $x("//ul[contains(@class,'tabs')]/li[2]"),
                               ssnField = $x("//*[@id='sveaSsnFormCompany']/div/input"),
                               emailFieldPrivate = $x("//form[@id='sveaManuallyAddressFormPrivate']//input[@id='email']"),
                               emailFieldCompany = $x("//form[@id='sveaManuallyAddressFormCompany']//input[@id='email']"),
@@ -32,7 +37,6 @@ public class CheckOutPage implements Page {
                               paymentAgreement = $x("//div[@class='payment--agreement']"); // bottom page element for scrolling
 
 
-
       public CheckOutPage getPayMethodValues(){
           paymentAgreement.waitUntil(appear, waitTimeout()).scrollIntoView(false);
           final List<SelenideElement> temp = new ArrayList<>();
@@ -43,7 +47,7 @@ public class CheckOutPage implements Page {
           return this;
       }
 
-     public CheckOutPage openAddressFormPrivate(){
+      public CheckOutPage openAddressFormPrivate(){
         addressLinkPrivate.waitUntil(appear, waitTimeout()).scrollIntoView(false).click();
         emailFieldPrivate.waitUntil(appear, waitTimeout()).scrollIntoView(false);
         sleep(2000);
@@ -62,12 +66,14 @@ public class CheckOutPage implements Page {
           return this;
       }
 
-    public CheckOutPage fillFormFieldPrivate(String value1, String value2){
+      public CheckOutPage fillFormFieldPrivate(String value1, String value2){
+        params.put("Adrress", value1);
+        params.put("Postcode", value2);
         addressFieldPrivate.waitUntil(appear, waitTimeout()).setValue(value1).pressTab();
         postcodeFieldPrivate.waitUntil(appear, waitTimeout()).setValue(value2).pressTab();
         sleep(2000);
         return this;
-    }
+      }
 
       public CheckOutPage scrollToAddressFormPrivate(){
           emailFieldPrivate.waitUntil(appear, waitTimeout()).scrollIntoView(true);
@@ -92,6 +98,11 @@ public class CheckOutPage implements Page {
           ssnPopUpFrame.waitUntil(appear, waitTimeout());
           ssnAddressButton.waitUntil(appear,waitTimeout()).click();
           return this;
+      }
+
+      public void finalizeParameters(){
+          params.put("Item", getCurrentItem());
+          parametersList.put(url(), params);
       }
 
       private String userItemToBuyDetails(String details, String date, String userName){

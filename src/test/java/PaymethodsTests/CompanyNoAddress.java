@@ -1,5 +1,6 @@
 package PaymethodsTests;
 
+import io.qameta.allure.Description;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -7,13 +8,13 @@ import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
 
-//@Listeners({TestExecutionListener.class})
 public class CompanyNoAddress extends BaseTest {
 
     private IndexPage homePage;
     private ProductPage productPage;
     private CheckOutPage checkOutPage;
 
+    @Description("Validates if Item can be found on specified channel")
     @Parameters({"url", "item"})
     @Test
     public void searchForItemAndAddToCart(String url, String item){
@@ -22,6 +23,7 @@ public class CompanyNoAddress extends BaseTest {
         productPage.addItemToCart();
     }
 
+    @Description("Validates if actual paymethods correspond to expected ones with no address provided and selected Company tab")
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
     public void availablePayMethodsNoAddress(){
         checkOutPage = new CheckOutPage()
