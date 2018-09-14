@@ -38,13 +38,13 @@ public class PrivateNoAndFillAddress extends BaseTest {
         sf.assertAll();
     }
 
-    @Test(dependsOnMethods = "availablePayMethodsNoAddress", dataProvider = "userAddress")
-    public void fillAddress(String s1, String s2){
+    @Parameters({"address", "postcode"})
+    @Test(dependsOnMethods = "availablePayMethodsNoAddress")
+    public void fillAddress(String address, String postcode){
         WebDriverRunner.getWebDriver().navigate().refresh();
         checkOutPage.scrollToAddressFormPrivate();
-        checkOutPage.fillFormFieldPrivate(s1, s2);
+        checkOutPage.fillFormFieldPrivate(address, postcode);
     }
-
 
     @Test(dependsOnMethods = "fillAddress")
     public void availablePayMethodsFilledAddress(){
@@ -54,10 +54,5 @@ public class PrivateNoAndFillAddress extends BaseTest {
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
         sf.assertAll();
-    }
-
-    @DataProvider
-    public Object[][] userAddress(){
-        return new Object[][]{{"Universitetsvägen 2B", "10691"},};
     }
 }

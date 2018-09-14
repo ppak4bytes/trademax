@@ -2,8 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="ChilliPayMethods" verbose="2">
 
-<parameter name="url" value="https://www.chilli.se"/>
-<parameter name="item" value="Soffor"/>
+    <parameter name="url" value="https://www.chilli.se"/>
+    <parameter name="item" value="Soffor"/>
+    <parameter name="address" value="Universitetsvägen 2B"/>
+    <parameter name="postcode" value="10691"/>
+    <parameter name="ssn" value="556780-9685"/>
 
 <test name="ChilliPayMethods tests">
     <classes>

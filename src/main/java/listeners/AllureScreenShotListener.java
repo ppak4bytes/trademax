@@ -19,7 +19,6 @@ public class AllureScreenShotListener implements IInvokedMethodListener {
     public void afterInvocation(IInvokedMethod iInvokedMethod, ITestResult iTestResult) {
          if(iTestResult.getStatus()==ITestResult.FAILURE || iTestResult.getStatus()==ITestResult.SUCCESS){
              makeScreenshot();
-             System.out.println(">>>>>>>>>> SCREENSHOT TAKEN ON " + iTestResult.getStatus() + " <<<<<<<<<<<<");
          }
     }
 

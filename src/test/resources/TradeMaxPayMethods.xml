@@ -4,6 +4,9 @@
 
     <parameter name="url" value="https://www.trademax.se"/>
     <parameter name="item" value="Soffor"/>
+    <parameter name="address" value="Universitetsvägen 2B"/>
+    <parameter name="postcode" value="10691"/>
+    <parameter name="ssn" value="556780-9685"/>
 
     <test name="TradeMaxPayMethods tests">
         <classes>
