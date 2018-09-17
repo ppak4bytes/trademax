@@ -18,9 +18,9 @@ public class ProductPage extends Page {
 
     public ProductPage addItemToCart(){
         addToCart.waitUntil(appear, waitTimeout()).doubleClick();
-        switchTo().activeElement();
+        sleep(4000);
         Set<String> wh = WebDriverRunner.getWebDriver().getWindowHandles();
-        System.out.println("!!!!!!!!!!!!---------------" + wh.size() + "---------------!!!!!!!!!!!!!!!!");
+        wh.stream().forEach(System.out::println);
         confirmationPopUp.waitUntil(appear, waitTimeout()).click();
         return this;
     }

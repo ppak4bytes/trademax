@@ -18,8 +18,8 @@ public class Draft extends BaseTest {
 
     @Test
     public void searchForItemAndAddToCart(){
-        homePage = new IndexPage("https://www.kodin1.com");
-        productPage = homePage.searchForItem("Sohvat");
+        homePage = new IndexPage("https://www.trademax.com");
+        productPage = homePage.searchForItem("Soffor");
         productPage.addItemToCart();
     }
 
