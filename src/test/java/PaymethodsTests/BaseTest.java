@@ -17,11 +17,11 @@ public abstract class BaseTest {
     @BeforeClass(alwaysRun = true)
     public void beforeRun(){
         //Configuration.browser = "chrome";
-        //Configuration.headless = true;
+        Configuration.headless = true;
         Configuration.startMaximized = true;
         Configuration.screenshots = false;
         /////////////////
-        Configuration.timeout = 10000;
+        Configuration.timeout = 6000;
     }
 
     @AfterClass(alwaysRun = true)

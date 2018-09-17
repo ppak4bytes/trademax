@@ -10,9 +10,9 @@
 
     <test name="FurnitureBoxPayMethods tests">
         <classes>
-            <!--<class name="PaymethodsTests.PrivateNoAndFillAddress"/>-->
+            <class name="PaymethodsTests.PrivateNoAndFillAddress"/>
             <class name="PaymethodsTests.CompanyNoAddress"/>
-            <!--<class name="PaymethodsTests.CompanySsn"/>-->
+            <class name="PaymethodsTests.CompanySsn"/>
         </classes>
     </test>
 </suite>

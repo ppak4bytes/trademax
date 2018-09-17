@@ -29,8 +29,8 @@ public class IndexPage extends Page {
 
         currentItem = itemID;
         final SelenideElement foundCategory = $x("//div[@id='searchPageTabs']//a[@title='"+itemID+"']");
-        if(cookieButton.isDisplayed()) cookieButton.shouldBe(visible).click();
-        searchField.shouldBe(visible).click();
+        if(cookieButton.isDisplayed()) cookieButton.click();
+        searchField.waitUntil(appear, waitTimeout()).click();
         searchField.setValue(itemID).pressEnter();
         categoriesTab.waitUntil(appear, waitTimeout()).click();
         foundCategory.waitUntil(appear, waitTimeout()).doubleClick();

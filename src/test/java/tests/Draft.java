@@ -18,22 +18,9 @@ public class Draft extends BaseTest {
 
     @Test
     public void searchForItemAndAddToCart(){
-        homePage = new IndexPage("https://www.trademax.se");
-        productPage = homePage.searchForItem("Soffor");
+        homePage = new IndexPage("https://www.kodin1.com");
+        productPage = homePage.searchForItem("Sohvat");
         productPage.addItemToCart();
     }
 
-    @Test(dependsOnMethods = "searchForItemAndAddToCart")
-    public void fillSsn(){
-        checkOutPage = new CheckOutPage()
-                .selectCompanyTab()
-                .fillSsnAndSelectAddress("556780-9685")
-                .getPayMethodValues();
-
-        SoftAssert sf = new SoftAssert();
-        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
-        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
-        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_INVOICE"), "Should contain Svea invoice value");
-        sf.assertAll();
-    }
 }
