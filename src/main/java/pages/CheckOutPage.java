@@ -22,7 +22,6 @@ public class CheckOutPage extends Page {
 
      private SelenideElement  companyTab = $x("//ul[contains(@class,'tabs')]/li[2]"),
                               ssnField = $x("//*[@id='sveaSsnFormCompany']/div/input"),
-                              kodin1SsnField = $x("//input[@id='ssn']").append("[1]"),
                               emailFieldPrivate = $x("//form[@id='sveaManuallyAddressFormPrivate']//input[@id='email']"),
                               emailFieldCompany = $x("//form[@id='sveaManuallyAddressFormCompany']//input[@id='email']"),
                               addressLinkPrivate = $x("//div[@id='checkout']//form[@id='sveaSsnFormPrivate']/a"),
@@ -100,6 +99,7 @@ public class CheckOutPage extends Page {
       }
 
       public CheckOutPage kodin1FillSsn(String ssn){
+          final SelenideElement kodin1SsnField = $x("//input[@id='ssn']").append("[1]");
           kodin1SsnField.waitUntil(appear, waitTimeout()).scrollIntoView(false).setValue(ssn).pressEnter();
           return this;
       }
