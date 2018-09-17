@@ -13,7 +13,6 @@ import static com.codeborne.selenide.Condition.visible;
 public class IndexPage extends Page {
 
 
-    private String indexUrl;
     private SelenideElement searchField = $x("//div[@id='search']/descendant::input"),
                             cookieButton = $x("//div[@id='cookiesPolicy']/descendant::button"),
                             categoriesTab = $x("//li[contains(text(), 'Kategor')]"),

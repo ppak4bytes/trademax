@@ -4,14 +4,14 @@
 
     <parameter name="url" value="https://www.kodin1.com"/>
     <parameter name="item" value="Sohvat"/>
-    <parameter name="address" value="Universitetsvägen 2B"/>
-    <parameter name="postcode" value="10691"/>
-    <parameter name="ssn" value="556780-9685"/>
+    <parameter name="address" value="Aleksanterinkatu 17"/>
+    <parameter name="postcode" value="00100"/>
+    <parameter name="ssn" value="1505551-4"/>
 
     <test name="Kodin1PayMethods tests">
         <classes>
-            <!--<class name="PaymethodsTests.PrivateNoAndFillAddress"/>-->
-            <class name="PaymethodsTests.CompanyNoAddress"/>
+            <class name="PaymethodsTests.Kodin1.PrivateNoAndFillAddress"/>
+            <class name="PaymethodsTests.Kodin1.CompanyNoAddress"/>
             <!--<class name="PaymethodsTests.CompanySsn"/>-->
         </classes>
     </test>

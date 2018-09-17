@@ -14,7 +14,7 @@ public class CompanyNoAddress extends BaseTest {
     private ProductPage productPage;
     private CheckOutPage checkOutPage;
 
-    @Description("Validates if Item can be found on specified channel")
+    @Description("Validates if Item can be found and added to cart on specified channel")
     @Parameters({"url", "item"})
     @Test
     public void searchForItemAndAddToCart(String url, String item){

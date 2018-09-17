@@ -16,7 +16,7 @@ public abstract class BaseTest {
 
     @BeforeClass(alwaysRun = true)
     public void beforeRun(){
-        Configuration.browser = "chrome";
+        //Configuration.browser = "chrome";
         //Configuration.headless = true;
         Configuration.startMaximized = true;
         Configuration.screenshots = false;
@@ -28,7 +28,6 @@ public abstract class BaseTest {
     public void afterRun(){
         WebDriverRunner.clearBrowserCache();
         WebDriverRunner.closeWebDriver();
-
     }
 
 }

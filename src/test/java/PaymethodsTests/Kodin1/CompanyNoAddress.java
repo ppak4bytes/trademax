@@ -1,5 +1,6 @@
-package PaymethodsTests;
+package PaymethodsTests.Kodin1;
 
+import PaymethodsTests.BaseTest;
 import io.qameta.allure.Description;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -8,9 +9,7 @@ import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
 
-import static org.testng.Assert.assertTrue;
-
-public class CompanySsn extends BaseTest {
+public class CompanyNoAddress extends BaseTest {
 
     private IndexPage homePage;
     private ProductPage productPage;
@@ -25,19 +24,17 @@ public class CompanySsn extends BaseTest {
         productPage.addItemToCart();
     }
 
-    @Description("Validates if proposed address can be selected from ssn pop-up and if actual paymethods correspond to expected ones based on provided ssn")
-    @Parameters({"ssn"})
+    @Description("Validates if actual paymethods correspond to expected ones with no address provided and selected Company tab")
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
-    public void fillSsn(String ssn){
+    public void availablePayMethodsNoAddress(){
         checkOutPage = new CheckOutPage()
                        .selectCompanyTab()
-                       .fillSsnAndSelectAddress(ssn)
                        .getPayMethodValues();
 
         SoftAssert sf = new SoftAssert();
-        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
-        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_INVOICE"), "Should contain Svea invoice value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("PAYTRAIL_DIRECT_BANK"), "Should contain Paytrail direct value");
         sf.assertAll();
     }
 }

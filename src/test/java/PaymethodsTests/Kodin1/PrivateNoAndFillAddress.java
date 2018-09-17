@@ -1,5 +1,6 @@
-package PaymethodsTests;
+package PaymethodsTests.Kodin1;
 
+import PaymethodsTests.BaseTest;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
 import org.testng.annotations.Parameters;
@@ -8,8 +9,6 @@ import org.testng.asserts.SoftAssert;
 import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
-
-import static org.testng.Assert.assertTrue;
 
 public class PrivateNoAndFillAddress extends BaseTest {
 
@@ -30,12 +29,13 @@ public class PrivateNoAndFillAddress extends BaseTest {
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
     public void availablePayMethodsNoAddress(){
         checkOutPage = new CheckOutPage()
-                       .openAddressFormPrivate()
                        .getPayMethodValues();
 
         SoftAssert sf = new SoftAssert();
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_INVOICE"), "Should contain Svea invoice value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_PAYMENT_PLAN"), "Should contain Svea payment plan value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
-        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("PAYTRAIL_DIRECT_BANK"), "Should contain Paytrail direct value");
         sf.assertAll();
     }
 
@@ -54,8 +54,11 @@ public class PrivateNoAndFillAddress extends BaseTest {
         checkOutPage.getPayMethodValues();
 
         SoftAssert sf = new SoftAssert();
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_INVOICE"), "Should contain Svea invoice value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_PAYMENT_PLAN"), "Should contain Svea payment plan value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
-        sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
+        sf.assertTrue(checkOutPage.payMethodsList.contains("PAYTRAIL_DIRECT_BANK"), "Should contain Paytrail direct value");
         sf.assertAll();
     }
+
 }

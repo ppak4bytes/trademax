@@ -2,8 +2,6 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import io.qameta.allure.Step;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -24,6 +22,7 @@ public class CheckOutPage extends Page {
 
      private SelenideElement  companyTab = $x("//ul[contains(@class,'tabs')]/li[2]"),
                               ssnField = $x("//*[@id='sveaSsnFormCompany']/div/input"),
+                              kodin1SsnField = $x("//input[@id='ssn']").append("[1]"),
                               emailFieldPrivate = $x("//form[@id='sveaManuallyAddressFormPrivate']//input[@id='email']"),
                               emailFieldCompany = $x("//form[@id='sveaManuallyAddressFormCompany']//input[@id='email']"),
                               addressLinkPrivate = $x("//div[@id='checkout']//form[@id='sveaSsnFormPrivate']/a"),
@@ -97,6 +96,11 @@ public class CheckOutPage extends Page {
           ssnField.waitUntil(appear, waitTimeout()).scrollIntoView(false).setValue(ssn).pressEnter();
           ssnPopUpFrame.waitUntil(appear, waitTimeout());
           ssnAddressButton.waitUntil(appear,waitTimeout()).click();
+          return this;
+      }
+
+      public CheckOutPage kodin1FillSsn(String ssn){
+          kodin1SsnField.waitUntil(appear, waitTimeout()).scrollIntoView(false).setValue(ssn).pressEnter();
           return this;
       }
 
