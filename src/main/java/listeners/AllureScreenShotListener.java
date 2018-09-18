@@ -17,9 +17,11 @@ public class AllureScreenShotListener implements IInvokedMethodListener {
 
     @Override
     public void afterInvocation(IInvokedMethod iInvokedMethod, ITestResult iTestResult) {
-         if(iTestResult.getStatus()==ITestResult.FAILURE || iTestResult.getStatus()==ITestResult.SUCCESS){
-             makeScreenshot();
-         }
+        if (!iInvokedMethod.isConfigurationMethod()) {
+            if (iTestResult.getStatus() == ITestResult.FAILURE || iTestResult.getStatus() == ITestResult.SUCCESS) {
+                makeScreenshot();
+            }
+        }
     }
 
     @Attachment(value = "screenshot", type = "image/png")

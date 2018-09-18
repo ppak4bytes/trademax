@@ -17,7 +17,7 @@ public class CompanySsn extends BaseTest {
     @Description("Validates if Item can be found and added to cart on specified channel")
     @Parameters({"url", "item"})
     @Test
-    public void searchForItemAndAddToCart(String url, String item){
+    public void searchForItemAndAddToCart(String url, String item) {
         homePage = new IndexPage(url);
         productPage = homePage.searchForItem(item);
         productPage.addItemToCart();

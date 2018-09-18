@@ -12,10 +12,8 @@ import java.util.Map;
 
 public abstract class BaseTest {
 
-    final List<Map<String, Map<String, String>>> suiteParams = new ArrayList<>();
-
     @BeforeClass(alwaysRun = true)
-    public void beforeRun(){
+    public void beforeRun() {
         //Configuration.browser = "chrome";
         Configuration.headless = true;
         Configuration.startMaximized = true;
@@ -25,7 +23,7 @@ public abstract class BaseTest {
     }
 
     @AfterClass(alwaysRun = true)
-    public void afterRun(){
+    public void afterRun() {
         WebDriverRunner.clearBrowserCache();
         WebDriverRunner.closeWebDriver();
     }

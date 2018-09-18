@@ -17,7 +17,7 @@ public class CompanyNoAddress extends BaseTest {
     @Description("Validates if Item can be found and added to cart on specified channel")
     @Parameters({"url", "item"})
     @Test
-    public void searchForItemAndAddToCart(String url, String item){
+    public void searchForItemAndAddToCart(String url, String item) {
         homePage = new IndexPage(url);
         productPage = homePage.searchForItem(item);
         productPage.addItemToCart();
@@ -25,11 +25,11 @@ public class CompanyNoAddress extends BaseTest {
 
     @Description("Validates if actual paymethods correspond to expected ones with no address provided and selected Company tab")
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
-    public void availablePayMethodsNoAddress(){
+    public void availablePayMethodsNoAddress() {
         checkOutPage = new CheckOutPage()
-                       .selectCompanyTab()
-                       .openAddressFormCompany()
-                       .getPayMethodValues();
+                .selectCompanyTab()
+                .openAddressFormCompany()
+                .getPayMethodValues();
 
         SoftAssert sf = new SoftAssert();
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
