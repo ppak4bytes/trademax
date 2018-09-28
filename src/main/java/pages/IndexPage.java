@@ -23,11 +23,11 @@ public class IndexPage extends Page {
 
         currentItem = itemID;
         final SelenideElement foundCategory = $x("//div[@id='searchPageTabs']//a[@title='" + itemID + "']");
-        if (cookieButton.isDisplayed()) cookieButton.click();
-        searchField.waitUntil(appear, waitTimeout()).click();
-        searchField.setValue(itemID).pressEnter();
-        categoriesTab.waitUntil(appear, waitTimeout()).click();
-        foundCategory.waitUntil(appear, waitTimeout()).doubleClick();
+        if(iFrame.exists()) iFrameCloseButton.click();
+        if(cookieButton.isDisplayed()) cookieButton.click();
+        searchField.waitUntil(visible, waitTimeout()).setValue(itemID).pressEnter();
+        categoriesTab.shouldBe(visible).click();
+        foundCategory.shouldBe(visible).doubleClick();
         if (!firstProductInCategoryList.is(visible)) firstProductInCategoryList.scrollIntoView(false).doubleClick();
         else firstProductInCategoryList.doubleClick();
         return new ProductPage();

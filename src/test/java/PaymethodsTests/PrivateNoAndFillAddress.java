@@ -1,5 +1,6 @@
 package PaymethodsTests;
 
+import base.BaseTest;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
 import org.testng.annotations.Parameters;

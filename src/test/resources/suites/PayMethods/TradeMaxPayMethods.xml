@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TradeMaxPayMethods" verbose="2">
+
+    <parameter name="url" value="https://www.trademax.se"/>
+    <parameter name="item" value="Soffor"/>
+    <parameter name="address" value="Universitetsvägen 2B"/>
+    <parameter name="postcode" value="10691"/>
+    <parameter name="ssn" value="5567809685"/>
+
+    <test name="PrivateNoAndFillAddress tests">
+        <parameter name="browser" value="safari"/>
+        <parameter name="platform" value="mac"/>
+        <parameter name="browserVersion" value="11.1"/>
+
+        <classes>
+            <class name="PaymethodsTests.PrivateNoAndFillAddress"/>
+        </classes>
+    </test>
+
+    <test name="CompanyNoAddress">
+        <parameter name="browser" value="safari"/>
+        <parameter name="platform" value="mac"/>
+        <parameter name="browserVersion" value="11.1"/>
+
+        <classes>
+            <class name="PaymethodsTests.CompanyNoAddress"/>
+        </classes>
+    </test>
+
+    <test name="CompanySsn">
+        <parameter name="browser" value="safari"/>
+        <parameter name="platform" value="mac"/>
+        <parameter name="browserVersion" value="11.1"/>
+
+        <classes>
+            <class name="PaymethodsTests.CompanySsn"/>
+        </classes>
+    </test>
+</suite>

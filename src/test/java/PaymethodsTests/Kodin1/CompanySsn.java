@@ -1,6 +1,6 @@
 package PaymethodsTests.Kodin1;
 
-import PaymethodsTests.BaseTest;
+import base.BaseTest;
 import io.qameta.allure.Description;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

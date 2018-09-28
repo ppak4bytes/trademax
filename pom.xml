@@ -54,6 +54,16 @@
             <artifactId>allure-maven</artifactId>
             <version>2.9</version>
         </dependency>
+        <dependency>
+            <groupId>org.aeonbits.owner</groupId>
+            <artifactId>owner</artifactId>
+            <version>1.0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>io.vavr</groupId>
+            <artifactId>vavr</artifactId>
+            <version>0.9.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -73,32 +83,40 @@
                 <version>2.20.1</version>
 
                 <configuration>
-                    <systemProperties>
-                        <property>
-                            <name>browser</name>
-                            <value>chrome</value>
-                        </property>
-                        <property>
-                            <name>webdriver.chrome.driver</name>
-                            <value>/usr/local/bin/chromedriver</value>
-                        </property>
-                    </systemProperties>
+                    <systemPropertyVariables>
+                        <selenide.timeout>7000</selenide.timeout>
+                        <selenide.screenshots>false</selenide.screenshots>
+                    </systemPropertyVariables>
+                    <!--<systemProperties>-->
+                        <!--<property>-->
+                            <!--<name>browser</name>-->
+                            <!--<value>chrome</value>-->
+                        <!--</property>-->
+                        <!--<property>-->
+                            <!--<name>webdriver.chrome.driver</name>-->
+                            <!--<value>/usr/local/bin/chromedriver</value>-->
+                        <!--</property>-->
+                    <!--</systemProperties>-->
                     <argLine>
                          -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/TradeMaxPayMethods.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/resources/FurnitureBoxPayMethods.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/resources/ChilliPayMethods.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/resources/WeGotPayMethods.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/resources/Kodin1PayMethods.xml</suiteXmlFile>
+                        <!--<suiteXmlFile>src/test/resources/suites/PayMethods/TradeMaxPayMethods.xml</suiteXmlFile>-->
+                        <!--<suiteXmlFile>src/test/resources/suites/PayMethods/FurnitureBoxPayMethods.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/test/resources/suites/PayMethods/ChilliPayMethods.xml</suiteXmlFile>
+                        <!--<suiteXmlFile>src/test/resources/suites/PayMethods/WeGotPayMethods.xml</suiteXmlFile>-->
+                        <!--<suiteXmlFile>src/test/resources/suites/PayMethods/Kodin1/Kodin1PayMethods.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                     <properties>
                         <property>
                             <name>listener</name>
                             <value>listeners.AllureScreenShotListener</value>
                         </property>
+                        <!--<property>-->
+                        <!--<name>suitethreadpoolsize</name>-->
+                        <!--<value>2</value>-->
+                        <!--</property>-->
                     </properties>
                 </configuration>
                 <dependencies>
