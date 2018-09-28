@@ -1,0 +1,5 @@
+browserstack.properties
+.allure
+.idea
+*.iml
+target
