@@ -1,1 +1,1 @@
-# trademax
+# test module
