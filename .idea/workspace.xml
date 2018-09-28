@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cb3def0-1c3c-41d9-92f6-a59e654b6360" name="Default Changelist" comment="+browsterstack support">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0cb3def0-1c3c-41d9-92f6-a59e654b6360" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -92,7 +91,7 @@
           <entry key="gitignore" value="22" />
           <entry key="java" value="5524" />
           <entry key="properties" value="1" />
-          <entry key="txt" value="529" />
+          <entry key="txt" value="530" />
           <entry key="xml" value="721" />
           <entry key="xsl" value="12" />
         </counts>
@@ -100,7 +99,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="5524" />
-          <entry key="PLAIN_TEXT" value="565" />
+          <entry key="PLAIN_TEXT" value="566" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="757" />
         </counts>
@@ -201,7 +200,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/browserstack.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -275,8 +278,8 @@
         <option value="$PROJECT_DIR$/src/test/resources/suites/PayMethods/TradeMaxPayMethods.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/suites/PayMethods/ChilliPayMethods.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/browserstack.properties" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/resources/browserstack.properties" />
       </list>
     </option>
   </component>
@@ -775,7 +778,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538143546817</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="++browsterstack support">
+      <created>1538144903802</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1538144903802</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -821,9 +831,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1682641" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1682641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -836,8 +845,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32871288" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49733758" visible="true" weight="0.31813473" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026624" side_tool="true" weight="0.32277226" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4968051" visible="true" weight="0.31813473" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.50319487" side_tool="true" visible="true" weight="0.31813473" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32970297" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32871288" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -877,7 +886,8 @@
     <MESSAGE value="+added sleep before confirmation popup" />
     <MESSAGE value="+added selectors repository, added additional check tp allure listener" />
     <MESSAGE value="+browsterstack support" />
-    <option name="LAST_COMMIT_MESSAGE" value="+browsterstack support" />
+    <MESSAGE value="++browsterstack support" />
+    <option name="LAST_COMMIT_MESSAGE" value="++browsterstack support" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/plugin.jar!/sun/plugin/javascript/navig/Navigator.class">
@@ -1164,7 +1174,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/browserstack.properties">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
