@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 import org.aeonbits.owner.ConfigFactory;
 
 @Config.LoadPolicy(Config.LoadType.FIRST)
-@Config.Sources("classpath:browserstack.properties")
+@Config.Sources("classpath:brw_stack.properties")
 public interface BrowserStackConfig extends Config {
 
     BrowserStackConfig CONFIG = ConfigFactory.create(BrowserStackConfig.class);

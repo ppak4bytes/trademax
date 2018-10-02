@@ -1,6 +1,5 @@
 package pages;
 
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Attachment;
 
@@ -14,15 +13,15 @@ import static repository.ElementSelectors.CheckOutPageSelectors.*;
 @SuppressWarnings("never used")
 public class CheckOutPage extends Page {
 
-    public List<String> payMethodsList = new ArrayList<>();
-
+    public List<String> payMethodsList;
+    public String zipCodeFieldLength;
 
     public CheckOutPage getPayMethodValues() {
         paymentAgreement.waitUntil(appear, waitTimeout()).scrollIntoView(false);
         final List<SelenideElement> temp = new ArrayList<>();
         payMethods.iterator().forEachRemaining(temp::add);
         payMethodsList = temp.stream().map(el -> el.getAttribute("value")).collect(Collectors.toList());
-        payMethodsList.forEach(System.out::println);
+//        payMethodsList.forEach(System.out::println);
         listOfPaymentMethods(payMethodsList);
         sleep(2000);
         return this;
@@ -85,10 +84,14 @@ public class CheckOutPage extends Page {
         return this;
     }
 
+    public CheckOutPage getZipCodeValue(){
+        zipCodeFieldLength = postcodeFieldCompany.getAttribute("maxLength");
+        return this;
+    }
+
     @Attachment
     private String listOfPaymentMethods(List<String> list) {
         return list.stream().collect(Collectors.joining("\n" + "-", "The list of paymethods is:" + "\n" + "-", ""));
     }
-
 
 }

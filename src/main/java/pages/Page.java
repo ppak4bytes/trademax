@@ -1,6 +1,8 @@
 package pages;
 
 
+import java.util.List;
+
 public abstract class Page {
 
     protected String currentUrl;
@@ -8,7 +10,7 @@ public abstract class Page {
     protected String currentItem;
 
     protected int waitTimeout() {
-        return 8000;
+        return 12000;
     }
 
     public String url() {

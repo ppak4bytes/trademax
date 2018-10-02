@@ -16,10 +16,9 @@ public class Edge implements Browser {
 
         final DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("MicrosoftEdge");
-        capabilities.setPlatform(Platform.WIN8);
-        capabilities.setVersion(parameters.get("browserVersion"));
+        capabilities.setPlatform(Platform.WINDOWS);
+        capabilities.setCapability("browser_version", "17.0");
         capabilities.setCapability("resolution", "1920x1080");
-        capabilities.setCapability("browserstack.ie.compatibility", "11001");
         capabilities.setCapability("browserstack.edge.enablePopups", true);
 
 

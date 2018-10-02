@@ -10,6 +10,9 @@ import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.testng.Assert.assertTrue;
 
 public class PrivateNoAndFillAddress extends BaseTest {
@@ -17,6 +20,7 @@ public class PrivateNoAndFillAddress extends BaseTest {
     private IndexPage homePage;
     private ProductPage productPage;
     private CheckOutPage checkOutPage;
+    List<String> payMthds;
 
     @Description("Validates if Item can be found and added to cart on specified channel")
     @Parameters({"url", "item"})
@@ -38,6 +42,8 @@ public class PrivateNoAndFillAddress extends BaseTest {
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
         sf.assertAll();
+        testPayMethods = new ArrayList<>(checkOutPage.payMethodsList);
+
     }
 
     @Description("Validates if Private customer Address form can be filled with provided address details")
@@ -58,5 +64,6 @@ public class PrivateNoAndFillAddress extends BaseTest {
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
         sf.assertAll();
+        testPayMethods = new ArrayList<>(checkOutPage.payMethodsList);
     }
 }

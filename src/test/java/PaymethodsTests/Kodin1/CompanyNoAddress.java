@@ -29,12 +29,17 @@ public class CompanyNoAddress extends BaseTest {
     public void availablePayMethodsNoAddress() {
         checkOutPage = new CheckOutPage()
                 .selectCompanyTab()
-                .getPayMethodValues();
+                .getPayMethodValues()
+                .getZipCodeValue();
 
+        System.out.println(">>>>>>>>>>>>>>>>>COUNTRY"+" "+homePage.url());
+        System.out.println(">>>>>>>>>>>>>>>>>RULE"+" "+ zipCodeLengthValidationRule(homePage));
+        System.out.println(">>>>>>>>>>>>>>>>>ZIP"+" "+checkOutPage.zipCodeFieldLength);
         SoftAssert sf = new SoftAssert();
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_INVOICE"), "Should contain Svea invoice value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("PAYTRAIL_DIRECT_BANK"), "Should contain Paytrail direct value");
+        sf.assertTrue(zipCodeLengthValidationRule(homePage).equals(checkOutPage.zipCodeFieldLength), "ZipCodeField length does not match expected value");
         sf.assertAll();
     }
 }

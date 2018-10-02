@@ -102,21 +102,21 @@
                     </argLine>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <!--<suiteXmlFile>src/test/resources/suites/PayMethods/TradeMaxPayMethods.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/test/resources/suites/PayMethods/TradeMaxPayMethods.xml</suiteXmlFile>
                         <!--<suiteXmlFile>src/test/resources/suites/PayMethods/FurnitureBoxPayMethods.xml</suiteXmlFile>-->
-                        <suiteXmlFile>src/test/resources/suites/PayMethods/ChilliPayMethods.xml</suiteXmlFile>
+                        <!--<suiteXmlFile>src/test/resources/suites/PayMethods/ChilliPayMethods.xml</suiteXmlFile>-->
                         <!--<suiteXmlFile>src/test/resources/suites/PayMethods/WeGotPayMethods.xml</suiteXmlFile>-->
-                        <!--<suiteXmlFile>src/test/resources/suites/PayMethods/Kodin1/Kodin1PayMethods.xml</suiteXmlFile>-->
+                        <!--<suiteXmlFile>src/test/resources/suites/PayMethods/Kodin1PayMethods.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                     <properties>
                         <property>
                             <name>listener</name>
                             <value>listeners.AllureScreenShotListener</value>
                         </property>
-                        <!--<property>-->
-                        <!--<name>suitethreadpoolsize</name>-->
-                        <!--<value>2</value>-->
-                        <!--</property>-->
+                        <property>
+                        <name>suitethreadpoolsize</name>
+                        <value>3</value>
+                        </property>
                     </properties>
                 </configuration>
                 <dependencies>

@@ -4,12 +4,18 @@ import browsers.*;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.IInvokedMethod;
+import org.testng.ITestContext;
+import org.testng.ITestNGMethod;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
+import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
+import pages.Page;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.Map;
 
 import static config.BrowserStackConfig.CONFIG;
@@ -23,6 +29,9 @@ public abstract class BaseTest {
     private Browser browser;
     private Map<String, String> parameters;
     private static final String URL = "https://" + CONFIG.userName() + ":" + CONFIG.key() + "@hub-cloud.browserstack.com/wd/hub";
+    protected List<String> testPayMethods;
+
+
 
 
     @BeforeTest(alwaysRun = true)
@@ -60,5 +69,29 @@ public abstract class BaseTest {
         }
         WebDriverRunner.setWebDriver(driver);
     }
+
+    protected String zipCodeLengthValidationRule(final Page indexPage){
+        final String validationRule;
+        if(indexPage.url().endsWith("se") || indexPage.url().endsWith("fi") || indexPage.url().endsWith("com")) validationRule = "5";
+        else validationRule = "4";
+        return validationRule;
+    }
+
+    @BeforeSuite
+    public void beforeSuite(ITestContext context){
+        System.out.println("********** suite"+context.getSuite().getName()+"name **********");
+    }
+
+    @BeforeClass
+    public void afterTestMethod(XmlTest test){
+        System.out.println("********** test"+test.getName()+"name **********");
+    }
+
+    @AfterClass
+    public void afterClass(){
+        testPayMethods.forEach(System.out::println);
+    }
+
+
 }
 

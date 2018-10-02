@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="FurnitureBoxPayMethods" verbose="2">
+<suite name="FurnitureBoxPayMethods" parallel="tests" thread-count="2" verbose="2">
 
     <parameter name="url" value="https://www.furniturebox.se"/>
     <parameter name="item" value="Soffor"/>
@@ -8,11 +8,33 @@
     <parameter name="postcode" value="10691"/>
     <parameter name="ssn" value="556780-9685"/>
 
-    <test name="FurnitureBoxPayMethods tests">
+    <test name="PrivateNoAndFillAddress tests">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="platform" value="windows"/>
+        <parameter name="browserVersion" value="68"/>
+
         <classes>
             <class name="PaymethodsTests.PrivateNoAndFillAddress"/>
-            <class name="PaymethodsTests.CompanyNoAddress"/>
-            <class name="PaymethodsTests.CompanySsn"/>
         </classes>
     </test>
+
+    <test name="CompanyNoAddress">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="platform" value="windows"/>
+        <parameter name="browserVersion" value="68"/>
+
+        <classes>
+            <class name="PaymethodsTests.CompanyNoAddress"/>
+        </classes>
+    </test>
+
+    <!--<test name="CompanySsn">-->
+        <!--<parameter name="browser" value="chrome"/>-->
+        <!--<parameter name="platform" value="windows"/>-->
+        <!--<parameter name="browserVersion" value="68"/>-->
+
+        <!--<classes>-->
+            <!--<class name="PaymethodsTests.CompanySsn"/>-->
+        <!--</classes>-->
+    <!--</test>-->
 </suite>

@@ -9,6 +9,9 @@ import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CompanyNoAddress extends BaseTest {
 
     private IndexPage homePage;
@@ -30,11 +33,18 @@ public class CompanyNoAddress extends BaseTest {
         checkOutPage = new CheckOutPage()
                 .selectCompanyTab()
                 .openAddressFormCompany()
-                .getPayMethodValues();
+                .getPayMethodValues()
+                .getZipCodeValue();
 
+        System.out.println(">>>>>>>>>>>>>>>>>COUNTRY"+" "+homePage.url());
+        System.out.println(">>>>>>>>>>>>>>>>>RULE"+" "+ zipCodeLengthValidationRule(homePage));
+        System.out.println(">>>>>>>>>>>>>>>>>ZIP"+" "+checkOutPage.zipCodeFieldLength);
         SoftAssert sf = new SoftAssert();
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
+        sf.assertTrue(zipCodeLengthValidationRule(homePage).equals(checkOutPage.zipCodeFieldLength), "ZipCodeField length does not match expected value");
         sf.assertAll();
+        testPayMethods = new ArrayList<>(checkOutPage.payMethodsList);
     }
+
 }

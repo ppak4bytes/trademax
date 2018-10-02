@@ -1,9 +1,5 @@
 package pages;
 
-import com.codeborne.selenide.WebDriverRunner;
-
-import java.util.Set;
-
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
@@ -15,6 +11,7 @@ public class ProductPage extends Page {
         addToCart.shouldBe(visible).doubleClick();
         sleep(4000);
         if(iFrameCloseButton.is(visible)) iFrameCloseButton.click();
+        if(!confirmationPopUp.is(visible)) addToCart.click();
         confirmationPopUp.waitUntil(appear, waitTimeout()).click();
         return this;
     }

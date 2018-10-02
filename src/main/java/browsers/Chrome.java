@@ -25,6 +25,7 @@ public class Chrome implements Browser {
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         capabilities.setPlatform(Platform.fromString(parameters.get("platform")));
         capabilities.setVersion(parameters.get("browserVersion"));
+        capabilities.setCapability("resolution", "1920x1080");
         capabilities.setCapability("browserstack.console", "verbose");
         capabilities.setCapability("browserstack.debug", "true");
         capabilities.setCapability("browserstack.networkLogs", "true");
