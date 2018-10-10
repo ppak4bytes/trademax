@@ -8,7 +8,8 @@ import static repository.ElementSelectors.ProductPageSelectors.*;
 public class ProductPage extends Page {
 
     public ProductPage addItemToCart() {
-        addToCart.shouldBe(visible).doubleClick();
+        addToCart.waitUntil(appear, waitTimeout()).doubleClick();
+//        if(!addToCart.is(visible)) addToCart.scrollIntoView(false).click();
         sleep(4000);
         if(iFrameCloseButton.is(visible)) iFrameCloseButton.click();
         if(!confirmationPopUp.is(visible)) addToCart.click();

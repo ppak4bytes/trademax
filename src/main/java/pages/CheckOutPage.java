@@ -1,8 +1,16 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -23,6 +31,7 @@ public class CheckOutPage extends Page {
         payMethodsList = temp.stream().map(el -> el.getAttribute("value")).collect(Collectors.toList());
 //        payMethodsList.forEach(System.out::println);
         listOfPaymentMethods(payMethodsList);
+        makeScreenshot(SCREENSHOT_FILEPATH);
         sleep(2000);
         return this;
     }
@@ -92,6 +101,14 @@ public class CheckOutPage extends Page {
     @Attachment
     private String listOfPaymentMethods(List<String> list) {
         return list.stream().collect(Collectors.joining("\n" + "-", "The list of paymethods is:" + "\n" + "-", ""));
+    }
+
+    private void makeScreenshot(String outputFolder){
+        DateFormat dateFormat = new SimpleDateFormat("hh-mm-ss");
+        Date date = new Date();
+        File srcFile = ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.FILE);
+        try { FileUtils.copyFile(srcFile, new File(outputFolder + "-" + dateFormat.format(date) + ".png")); }
+        catch (IOException e){e.printStackTrace();}
     }
 
 }

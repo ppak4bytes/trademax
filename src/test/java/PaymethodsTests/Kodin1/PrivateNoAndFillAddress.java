@@ -10,6 +10,8 @@ import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
 
+import java.util.ArrayList;
+
 public class PrivateNoAndFillAddress extends BaseTest {
 
     private IndexPage homePage;
@@ -37,6 +39,8 @@ public class PrivateNoAndFillAddress extends BaseTest {
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("PAYTRAIL_DIRECT_BANK"), "Should contain Paytrail direct value");
         sf.assertAll();
+        testPayMethods = new ArrayList<>(checkOutPage.payMethodsList);
+
     }
 
     @Description("Validates if Private customer Address form can be filled with provided address details")
@@ -59,6 +63,7 @@ public class PrivateNoAndFillAddress extends BaseTest {
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("PAYTRAIL_DIRECT_BANK"), "Should contain Paytrail direct value");
         sf.assertAll();
+        testPayMethods = new ArrayList<>(checkOutPage.payMethodsList);
     }
 
 }

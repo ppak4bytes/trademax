@@ -36,9 +36,6 @@ public class CompanyNoAddress extends BaseTest {
                 .getPayMethodValues()
                 .getZipCodeValue();
 
-        System.out.println(">>>>>>>>>>>>>>>>>COUNTRY"+" "+homePage.url());
-        System.out.println(">>>>>>>>>>>>>>>>>RULE"+" "+ zipCodeLengthValidationRule(homePage));
-        System.out.println(">>>>>>>>>>>>>>>>>ZIP"+" "+checkOutPage.zipCodeFieldLength);
         SoftAssert sf = new SoftAssert();
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_CARD"), "Should contain Svea card value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");

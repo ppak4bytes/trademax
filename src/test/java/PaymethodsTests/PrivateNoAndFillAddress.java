@@ -31,6 +31,8 @@ public class PrivateNoAndFillAddress extends BaseTest {
         productPage.addItemToCart();
     }
 
+
+
     @Description("Validates if actual paymethods correspond to expected ones with no address provided")
     @Test(dependsOnMethods = "searchForItemAndAddToCart")
     public void availablePayMethodsNoAddress() {

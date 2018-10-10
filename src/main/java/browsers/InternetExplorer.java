@@ -22,7 +22,7 @@ public class InternetExplorer implements Browser {
         capabilities.setPlatform(Platform.WINDOWS);
         capabilities.setVersion(parameters.get("browserVersion"));
         capabilities.setCapability("resolution", "1920x1080");
-        capabilities.setCapability("browserstack.ie.arch", "x32");
+        capabilities.setCapability("browserstack.ie.arch", "x64");
         capabilities.setCapability("browserstack.ie.compatibility", "11001");
         capabilities.setCapability("browserstack.ie.enablePopups", true);
 

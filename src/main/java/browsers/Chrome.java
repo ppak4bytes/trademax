@@ -19,13 +19,14 @@ public class Chrome implements Browser {
         final ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-urlfetcher-cert-requests");
         options.addArguments("--disable-popup-blocking");
+        options.addArguments("--start-maximized");
 
         final DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         capabilities.setPlatform(Platform.fromString(parameters.get("platform")));
         capabilities.setVersion(parameters.get("browserVersion"));
-        capabilities.setCapability("resolution", "1920x1080");
+//        capabilities.setCapability("resolution", "1920x1080");
         capabilities.setCapability("browserstack.console", "verbose");
         capabilities.setCapability("browserstack.debug", "true");
         capabilities.setCapability("browserstack.networkLogs", "true");

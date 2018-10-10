@@ -21,7 +21,7 @@ public class Safari implements Browser {
         capabilities.setPlatform(Platform.MAC);
         capabilities.setVersion(parameters.get("browserVersion"));
         capabilities.setCapability("resolution", "1920x1080");
-        capabilities.setCapability("browserstack.safari.enablePopups", true);
+        capabilities.setCapability("browserstack.safari.enablePopups", false);
 
         capabilities.setCapability("browserstack.console", "verbose");
         capabilities.setCapability("browserstack.debug", "true");

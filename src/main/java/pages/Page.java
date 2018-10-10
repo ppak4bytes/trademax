@@ -5,6 +5,8 @@ import java.util.List;
 
 public abstract class Page {
 
+    final String SCREENSHOT_FILEPATH = "target/pdf_screenshots/";
+
     protected String currentUrl;
 
     protected String currentItem;
@@ -20,5 +22,6 @@ public abstract class Page {
     public String getCurrentItem() {
         return currentItem;
     }
+
 
 }

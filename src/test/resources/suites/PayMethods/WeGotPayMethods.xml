@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="WeGotPayMethods" verbose="2">
+<suite name="WeGot" verbose="2">
 
     <parameter name="url" value="https://www.wegot.se"/>
     <parameter name="item" value="Soffor"/>
@@ -8,7 +8,7 @@
     <parameter name="postcode" value="10691"/>
     <parameter name="ssn" value="556780-9685"/>
 
-    <test name="PrivateNoAndFillAddress tests">
+    <test name="WeGotPayMethods PrivateNoAndFillAddress tests">
         <parameter name="browser" value="safari"/>
         <parameter name="platform" value="mac"/>
         <parameter name="browserVersion" value="11.1"/>
@@ -18,7 +18,7 @@
         </classes>
     </test>
 
-    <test name="CompanyNoAddress">
+    <test name="WeGotPayMethods CompanyNoAddress">
         <parameter name="browser" value="safari"/>
         <parameter name="platform" value="mac"/>
         <parameter name="browserVersion" value="11.1"/>
@@ -28,15 +28,15 @@
         </classes>
     </test>
 
-    <!--<test name="CompanySsn">-->
-        <!--<parameter name="browser" value="safari"/>-->
-        <!--<parameter name="platform" value="mac"/>-->
-        <!--<parameter name="browserVersion" value="11.1"/>-->
+    <test name="WeGotPayMethods CompanySsn">
+        <parameter name="browser" value="safari"/>
+        <parameter name="platform" value="mac"/>
+        <parameter name="browserVersion" value="11.1"/>
 
-        <!--<classes>-->
-            <!--<class name="PaymethodsTests.CompanySsn"/>-->
-        <!--</classes>-->
-    <!--</test>-->
+        <classes>
+            <class name="PaymethodsTests.CompanySsn"/>
+        </classes>
+    </test>
 </suite>
 
 

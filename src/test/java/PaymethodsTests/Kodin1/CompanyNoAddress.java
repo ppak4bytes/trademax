@@ -9,6 +9,8 @@ import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
 
+import java.util.ArrayList;
+
 public class CompanyNoAddress extends BaseTest {
 
     private IndexPage homePage;
@@ -41,5 +43,7 @@ public class CompanyNoAddress extends BaseTest {
         sf.assertTrue(checkOutPage.payMethodsList.contains("PAYTRAIL_DIRECT_BANK"), "Should contain Paytrail direct value");
         sf.assertTrue(zipCodeLengthValidationRule(homePage).equals(checkOutPage.zipCodeFieldLength), "ZipCodeField length does not match expected value");
         sf.assertAll();
+        testPayMethods = new ArrayList<>(checkOutPage.payMethodsList);
+
     }
 }

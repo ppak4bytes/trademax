@@ -9,6 +9,8 @@ import pages.CheckOutPage;
 import pages.IndexPage;
 import pages.ProductPage;
 
+import java.util.ArrayList;
+
 import static org.testng.Assert.assertTrue;
 
 public class CompanySsn extends BaseTest {
@@ -40,5 +42,6 @@ public class CompanySsn extends BaseTest {
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_DIRECT_BANK"), "Should contain Svea direct value");
         sf.assertTrue(checkOutPage.payMethodsList.contains("SVEA_INVOICE"), "Should contain Svea invoice value");
         sf.assertAll();
+        testPayMethods = new ArrayList<>(checkOutPage.payMethodsList);
     }
 }
